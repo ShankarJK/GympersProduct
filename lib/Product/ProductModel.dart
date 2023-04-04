@@ -13,19 +13,19 @@ abstract class _ProductModelBase with Store {
   List<Map<String, dynamic>> collectionOfProducts = [{}];
   List<Map<String, dynamic>> collectionOfTempProducts = [{}];
   @action
-   setBrand({required List<String> collectionofBrand}) {
+  setBrand({required List<String> collectionofBrand}) {
     this.collectionofBrand = [];
     this.collectionofBrand = collectionofBrand;
   }
 
   @action
-   setProduct({required List<Map<String, dynamic>> collectionOfProducts}) {
+  setProduct({required List<Map<String, dynamic>> collectionOfProducts}) {
     this.collectionOfProducts = [];
     this.collectionOfProducts = collectionOfProducts;
   }
 
-   @action
-   tempProduct({required List<Map<String, dynamic>> collectionOfTempProducts}) {
+  @action
+  tempProduct({required List<Map<String, dynamic>> collectionOfTempProducts}) {
     this.collectionOfTempProducts = [];
     this.collectionOfTempProducts = collectionOfTempProducts;
   }

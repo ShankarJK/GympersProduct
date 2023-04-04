@@ -33,35 +33,36 @@ class Productlist extends StatelessWidget {
           ),
           Container(
             height: 100,
-            child: Observer(
-              builder: (context) {
-                return ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: _instance.collectionofBrand.length,
-                  itemBuilder: (BuildContext context, int index) {
-                    return MaterialButton(
-                      onPressed: () {_instance.productFilter(brandindex: index);},
-                      child: CircleAvatar(
-                        backgroundColor: Colors.white,
-                        child: Image.asset(
-                          _instance.collectionofBrand[index] == "Nike"
-                              ? "lib/Helpers/Resources/asset/Images/nike.png"
-                              : _instance.collectionofBrand[index] == "Adidas"
-                                  ? "lib/Helpers/Resources/asset/Images/adidas.png"
-                                  : _instance.collectionofBrand[index] == "Puma"
-                                      ? "lib/Helpers/Resources/asset/Images/puma.png"
-                                      : _instance.collectionofBrand[index] == "All"
-                                          ? "lib/Helpers/Resources/asset/Images/all.png"
-                                          : "lib/Helpers/Resources/asset/Images/all.png",
-                          height: 20,
-                          width: 30,
-                        ),
+            child: Observer(builder: (context) {
+              return ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: _instance.collectionofBrand.length,
+                itemBuilder: (BuildContext context, int index) {
+                  return MaterialButton(
+                    onPressed: () {
+                      _instance.productFilter(brandindex: index);
+                    },
+                    child: CircleAvatar(
+                      backgroundColor: Colors.white,
+                      child: Image.asset(
+                        _instance.collectionofBrand[index] == "Nike"
+                            ? "lib/Helpers/Resources/asset/Images/nike.png"
+                            : _instance.collectionofBrand[index] == "Adidas"
+                                ? "lib/Helpers/Resources/asset/Images/adidas.png"
+                                : _instance.collectionofBrand[index] == "Puma"
+                                    ? "lib/Helpers/Resources/asset/Images/puma.png"
+                                    : _instance.collectionofBrand[index] ==
+                                            "All"
+                                        ? "lib/Helpers/Resources/asset/Images/all.png"
+                                        : "lib/Helpers/Resources/asset/Images/all.png",
+                        height: 20,
+                        width: 30,
                       ),
-                    );
-                  },
-                );
-              }
-            ),
+                    ),
+                  );
+                },
+              );
+            }),
           ),
           const SizedBox(
             height: 28,
